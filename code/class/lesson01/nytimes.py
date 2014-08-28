@@ -7,6 +7,7 @@ import sys
 age = 0
 impressions = 0
 clicks = 0
+oldest_person = 0
 
 lines = sys.stdin.readlines()
 lines.pop(0)
@@ -21,8 +22,8 @@ for line in lines:
   impressions = impressions + int(clean_line[2])
   clicks = clicks + int(clean_line[3])
 
-  if age > int(oldest_person[0]):
-  	oldest_person = c_line
+  if int(clean_line[0]) > oldest_person:
+  	oldest_person = int(clean_line[0])
 
 
 print 'Total Unique Visitors: ', n
